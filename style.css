@@ -13,11 +13,12 @@ body {
   height: 100vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 0.35fr [dashboard-end] auto;
+  grid-template-columns: 0.5fr [dashboard-end] auto;
 }
 
 .dashboard__container {
-  background-color: rgb(0, 61, 61);
+  z-index: 10;
+  background-color: rgb(8, 0, 115);
   color: white;
   grid-column-end: dashboard-end;
   display: grid;
@@ -72,7 +73,9 @@ body {
   padding-block-end: 1rem;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: brown;
+  background-color: rgb(224, 224, 224);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.303);
+  z-index: 5;
 }
 .user-nav__uppercontainer {
   display: grid;
@@ -95,7 +98,7 @@ body {
   outline: none;
   border: none;
   border-radius: 30px;
-  background-color: rgb(85, 85, 255);
+  background-color: rgb(8, 0, 115);
   color: white;
   cursor: pointer;
 }
@@ -152,17 +155,33 @@ body {
   height: 7em;
 }
 .user__welcome-text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   padding: 1rem;
 }
 .user__welcome-text--name {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .content__container {
-  background-color: chocolate;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 3rem;
+  background-color: rgb(223, 225, 235);
   overflow-y: auto;
+}
+.content__project {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+.content__ann {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.content__trending {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 html {
@@ -171,6 +190,21 @@ html {
 
 body {
   font-family: Roboto;
+}
+
+.item__container {
+  padding: 3rem 2rem;
+  border-inline-start: 6px solid orange;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  overflow: wrap;
+}
+.item__container--heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.item__container--text {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

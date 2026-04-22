@@ -1,0 +1,19 @@
+.item__container{
+padding:3rem 2rem;
+border-inline-start: 6px solid orange;
+border-radius: 5px;
+
+background-color: rgb(255, 255, 255);
+overflow: wrap;
+
+    &--heading{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    &--text{
+        font-size: 1.4rem;
+
+
+    }
+
+}

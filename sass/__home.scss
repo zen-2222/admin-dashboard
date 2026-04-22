@@ -7,7 +7,7 @@ body{box-sizing: border-box;}
     overflow: hidden;
     //TEST
     display:grid;
-    grid-template-columns: .35fr [dashboard-end] auto;
+    grid-template-columns: .5fr [dashboard-end] auto;
 
 }
 
@@ -15,8 +15,8 @@ body{box-sizing: border-box;}
 .dashboard{
 
     &__container{
-
-        background-color: rgb(0, 61, 61);
+        z-index: 10;
+        background-color: rgb(8, 0, 115);
         color:white;
         
         grid-column-end:dashboard-end;
@@ -95,7 +95,9 @@ body{box-sizing: border-box;}
         padding-block-end: 1rem;
         grid-template-columns: 2fr  1fr ;
         grid-template-rows: 1fr  1fr;
-        background-color: brown;
+        background-color: rgb(224, 224, 224);
+        box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.303);
+        z-index: 5;
     }
     &__uppercontainer{
         display:grid;
@@ -119,7 +121,7 @@ body{box-sizing: border-box;}
         outline:none;
         border:none;
         border-radius: 30px;
-        background-color:rgb(85, 85, 255);
+        background-color:rgb(8, 0, 115);;
         color:white;
     cursor: pointer;}
 }
@@ -176,13 +178,20 @@ body{box-sizing: border-box;}
 
     //lower container
 
-    &__welcome{display:flex;align-items: center;gap:4rem;}
-    &__pfp--big{height: 7em;}
+    &__welcome{
+        display:flex;
+        align-items: center;
+        gap:4rem;
+    }
+    &__pfp--big{
+        height: 7em;
+    }
     &__welcome-text{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         line-height: 1.5;
         padding:1rem;
-        &--name{font-size: 3.5rem;}
+
+        &--name{font-size: 3rem;}
 
     }
 }
@@ -191,8 +200,26 @@ body{box-sizing: border-box;}
 
 .content{
     &__container{
-        background-color: chocolate;
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        padding:3rem;
+        
+        background-color: rgb(223, 225, 235);
         overflow-y: auto;
+    }
+    &__project{
+        grid-column: 1/2;
+        grid-row: 1/-1;
+    }
+    &__ann{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    &__trending{
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 
 }
