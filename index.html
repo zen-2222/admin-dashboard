@@ -49,27 +49,35 @@
         </aside>
         
         <main class="main">
-            <div class="user-nav__container">
+            <nav class="user-nav__container">
                 <div class="user-nav__uppercontainer">
                     <div class="search">
-                        <input type="search" name="search" placeholder="Search">
-                        <button type="submit">S</button>
+                        <button type="submit" class="search__submit">S</button>
+                        <input type="search" name="search" placeholder="Search" class="search__box">
 
                     </div>
                     <div class="user">
-                        <a href="#">N</a>
+                        <a href="#" class="user__notif">N</a>
                         <img src="/img/images.ico" alt="pfp" class="user__pfp">
                         <span class="user__name">Name</span>
                     </div>
                 </div>
                 <div class="user-nav__lowercontainer">
+                    <div class="user__welcome">
+                        <img src="/img/images.ico" alt="pfp" class="user__pfp user__pfp--big">
+                        <span class="user__welcome-text">Hi there,<br><span class="user__welcome-text--name">Name</span></span>
+                    </div>
+                    <div class="user-nav__buttons">
+                        <button class="user-nav__button">New</button>
+                        <button class="user-nav__button">Upload</button>
+                        <button class="user-nav__button">Share</button>
 
-
+                    </div>
                 </div>
 
 
 
-            </div>
+            </nav>
             <div class="content__container"></div>
         </main>
     </div>

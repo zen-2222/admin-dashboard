@@ -7,7 +7,7 @@ body{box-sizing: border-box;}
     overflow: hidden;
     //TEST
     display:grid;
-    grid-template-columns: .18fr [dashboard-end] auto;
+    grid-template-columns: .35fr [dashboard-end] auto;
 
 }
 
@@ -88,20 +88,111 @@ body{box-sizing: border-box;}
 }
 
 .user-nav{
-    &__container{background-color: brown;
-        padding:3rem;
-        display:flex;
-        flex-direction: column;
-        gap:1rem;
+    
+    &__container{
+        display:grid;
+        padding:0 5rem;
+        padding-block-end: 1rem;
+        grid-template-columns: 2fr  1fr ;
+        grid-template-rows: 1fr  1fr;
+        background-color: brown;
+    }
+    &__uppercontainer{
+        display:grid;
+        grid-template-columns: subgrid;
+        grid-column: span 2;
 
 
     }
-    &__uppercontainer{display:flex;
-    justify-content: space-between;}
-    &__lowercontainer{}
-    
+    &__lowercontainer{
+        display:grid;
+        grid-template-columns: subgrid;
+        grid-column: span 2;
+    }
+    &__buttons{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;}
+    &__button{
+        font-size:1.6rem;
+        padding:1.3rem 3.5rem;
+        outline:none;
+        border:none;
+        border-radius: 30px;
+        background-color:rgb(85, 85, 255);
+        color:white;
+    cursor: pointer;}
 }
+.search{
+    position: relative;
+    display:flex;
+    align-items: center;
+    &__box{
+        padding:.5rem 1rem;
+        padding-inline-start: 5rem;
+        
+        font-size: 1.6rem;
+        width:clamp(20rem,100%,85rem);
+        height: 4rem;
+        
+        outline:none;
+        border: none;
+        border-radius: 20px;
+    }
+    &__submit{
+        position:absolute;
+        left:2rem;
+        
+        width:2rem;
+        height:4rem;
+        
+        background-color: transparent;
+        border:none;
+        cursor: pointer;
+        &:hover{
+            background-color: aliceblue;
+        }
+    }
+    
+
+}
+.user{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    gap:6rem;
+
+    font-size: 1.5rem;
+    &__pfp{
+        height: 3em;
+        
+        border-radius: 50%;
+    }
+    &__name{
+        font-size: 1.7rem;
+        padding:1.5rem;}
+    &__notif{}
+
+
+    //lower container
+
+    &__welcome{display:flex;align-items: center;gap:4rem;}
+    &__pfp--big{height: 7em;}
+    &__welcome-text{
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding:1rem;
+        &--name{font-size: 3.5rem;}
+
+    }
+}
+
+
+
 .content{
-    &__container{background-color: chocolate;}
+    &__container{
+        background-color: chocolate;
+        overflow-y: auto;
+    }
 
 }
