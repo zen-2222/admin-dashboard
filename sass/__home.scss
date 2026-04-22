@@ -1,0 +1,107 @@
+*,*::after,*::before{box-sizing:inherit;padding:0;margin:0;}
+body{box-sizing: border-box;}
+/*===============*/
+.container{
+    //TEST
+    height:100vh;
+    overflow: hidden;
+    //TEST
+    display:grid;
+    grid-template-columns: .18fr [dashboard-end] auto;
+
+}
+
+
+.dashboard{
+
+    &__container{
+
+        background-color: rgb(0, 61, 61);
+        color:white;
+        
+        grid-column-end:dashboard-end;
+
+        display:grid;
+        grid-template-rows: max-content max-content auto;
+        align-items: start;
+        justify-content: center;
+        gap:3.5rem;
+
+        font-size: 1.8rem;
+
+        padding:3rem 3rem 0 2.5rem;
+
+
+    }
+    &__nav{}
+    &__items{}
+    &__item{
+        list-style-type: none;
+
+        & a,a:link,a:active,a:visited,a:focus,a:focus-visible{
+            display:inline-block;
+            position: relative;
+            outline:none;
+
+            text-decoration: none;
+            color:white;
+            font-weight: 700;
+            transition: all .2s;
+
+            &::before{
+                position: absolute;
+                content:"";
+                display:block;
+                bottom:-1px;
+                right:0;
+                width:0;
+                height: 3px;
+                
+                background-color: rgb(255, 255, 255);
+                transition: all .2s;
+                border-radius: 20px;
+
+            }
+        }
+        & a:hover{
+            transform: translateY(-3px);
+            &:before{
+                width:100%;
+            }
+        }
+        &:not(:last-child){
+            margin-block-end:2rem ;
+        }
+    }
+    
+    &__header{}
+    &__links{}
+    &__extra{}
+}
+
+
+
+
+.main{
+    display:grid;
+    grid-template-rows: .26fr auto;
+}
+
+.user-nav{
+    &__container{background-color: brown;
+        padding:3rem;
+        display:flex;
+        flex-direction: column;
+        gap:1rem;
+
+
+    }
+    &__uppercontainer{display:flex;
+    justify-content: space-between;}
+    &__lowercontainer{}
+    
+}
+.content{
+    &__container{background-color: chocolate;}
+
+}

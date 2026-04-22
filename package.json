@@ -1,0 +1,23 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/zen-2222/admin-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/zen-2222/admin-dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zen-2222/admin-dashboard.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss style.css"
+  },
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}

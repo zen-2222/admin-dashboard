@@ -5,8 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <aside class="dashboard__container">
+            <div class="dashboard__header">
+                <h2>Dashboard</h2>
+            </div>
+            
+
+
+
+            <div class="dashboard__links">
+                <nav class="dashboard__nav">
+                    <ul class="dashboard__items">
+                        <li class="dashboard__item"><a href="#">Home</a></li>
+                        <li class="dashboard__item"><a href="#">Profile</a></li>
+                        <li class="dashboard__item"><a href="#">Messages</a></li>
+                        <li class="dashboard__item"><a href="#">History</a></li>
+                        <li class="dashboard__item"><a href="#">Tasks</a></li>
+                        <li class="dashboard__item"><a href="#">Communities</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+            <div class="dashboard__extra">
+                <nav class="dashboard__nav">
+                    <ul class="dashboard__items">
+                        <li class="dashboard__item"><a href="#">Settings</a></li>
+                        <li class="dashboard__item"><a href="#">Support</a></li>
+                        <li class="dashboard__item"><a href="#">Privacy</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+        </aside>
+        
+        <main class="main">
+            <div class="user-nav__container">
+                <div class="user-nav__uppercontainer">
+                    <div class="search">
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit">S</button>
+
+                    </div>
+                    <div class="user">
+                        <a href="#">N</a>
+                        <img src="/img/images.ico" alt="pfp" class="user__pfp">
+                        <span class="user__name">Name</span>
+                    </div>
+                </div>
+                <div class="user-nav__lowercontainer">
+
+
+                </div>
+
+
+
+            </div>
+            <div class="content__container"></div>
+        </main>
+    </div>
 </body>
 </html>
