@@ -167,9 +167,10 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 4rem;
   padding: 3rem;
   background-color: rgb(223, 225, 235);
-  overflow-y: auto;
+  overflow: auto;
 }
 .content__project {
   grid-column: 1/2;
@@ -182,6 +183,16 @@ body {
 .content__trending {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+.content__heading {
+  font-size: 2rem;
+  margin-block-end: 2rem;
+}
+
+.project__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
 }
 
 html {
@@ -202,6 +213,7 @@ body {
 .item__container--heading {
   font-size: 1.8rem;
   font-weight: bold;
+  margin-block-end: 1rem;
 }
 .item__container--text {
   font-size: 1.4rem;
