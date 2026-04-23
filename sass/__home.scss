@@ -7,7 +7,7 @@ body{box-sizing: border-box;}
     overflow: hidden;
     //TEST
     display:grid;
-    grid-template-columns: .5fr [dashboard-end] auto;
+    grid-template-columns: .9fr [dashboard-end] 5fr;
 
 }
 
@@ -85,6 +85,7 @@ body{box-sizing: border-box;}
 .main{
     display:grid;
     grid-template-rows: .26fr auto;
+    overflow:auto;
 }
 
 .user-nav{
@@ -92,9 +93,8 @@ body{box-sizing: border-box;}
     &__container{
         display:grid;
         padding:0 5rem;
-        padding-block-end: 1rem;
         grid-template-columns: 2fr  1fr ;
-        grid-template-rows: 1fr  1fr;
+        grid-template-rows: .9fr  1fr;
         background-color: rgb(224, 224, 224);
         box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.303);
         z-index: 5;
@@ -114,10 +114,13 @@ body{box-sizing: border-box;}
     &__buttons{
         display:flex;
         justify-content: space-between;
-        align-items: center;}
+        align-items: center;
+        gap:1rem;
+    }
     &__button{
-        font-size:1.6rem;
-        padding:1.3rem 3.5rem;
+        font-size:1.3rem;
+        font-weight: bold;
+        padding:1.3rem 4rem;
         outline:none;
         border:none;
         border-radius: 30px;
@@ -126,6 +129,7 @@ body{box-sizing: border-box;}
     cursor: pointer;}
 }
 .search{
+
     position: relative;
     display:flex;
     align-items: center;
@@ -133,9 +137,9 @@ body{box-sizing: border-box;}
         padding:.5rem 1rem;
         padding-inline-start: 5rem;
         
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         width:clamp(20rem,100%,85rem);
-        height: 4rem;
+        height: 3.5rem;
         
         outline:none;
         border: none;
@@ -146,7 +150,7 @@ body{box-sizing: border-box;}
         left:2rem;
         
         width:2rem;
-        height:4rem;
+        height:3.5rem;
         
         background-color: transparent;
         border:none;
@@ -162,16 +166,16 @@ body{box-sizing: border-box;}
     display:flex;
     justify-content: end;
     align-items: center;
-    gap:6rem;
+    gap:5rem;
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     &__pfp{
-        height: 3em;
+        height: 4.5rem;
         
         border-radius: 50%;
     }
     &__name{
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         padding:1.5rem;}
     &__notif{}
 
@@ -182,16 +186,17 @@ body{box-sizing: border-box;}
         display:flex;
         align-items: center;
         gap:4rem;
+        font-weight:500;
     }
     &__pfp--big{
         height: 7em;
     }
     &__welcome-text{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 1.5;
         padding:1rem;
 
-        &--name{font-size: 3rem;}
+        &--name{font-size: 2.3em;}
 
     }
 }
@@ -201,10 +206,10 @@ body{box-sizing: border-box;}
 .content{
     &__container{
         display:grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 4fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap:4rem;
-
+        row-gap: 3rem;
         padding:3rem;
         
         background-color: rgb(223, 225, 235);
@@ -225,9 +230,9 @@ body{box-sizing: border-box;}
         grid-row: 2/3;
     }
     &__heading{
-    font-size: 2rem;
+    font-size: 1.7rem;
         
-    margin-block-end: 2rem;}
+    margin-block-end: 1.3rem;}
 
 }
 
@@ -238,8 +243,63 @@ body{box-sizing: border-box;}
         display:grid;
         grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
 
-        gap:3rem;
+        gap:2rem;
     }
+
+
+
+}
+.ann{
+
+    &__container{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: repeat(auto-fit,1fr auto);
+        background-color: white;
+        padding:.5rem 1rem; 
+        border-radius: 5px;
+        height:90%;
+        font-size: 1.3rem;
+    }
+    
+    &__heading{
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-block-end: .5rem;
+        display:inline-block;
+
+
+    }
+    
+    &__text{
+        margin-block: 1rem;
+    }
+}
+.trending{
+    &__container{
+        display:flex;
+        flex-direction: column;
+        padding:.5rem 1.2rem;
+        background-color: white;
+        
+        border-radius: 4px;
+    }
+    &__user{display:flex;
+        margin:1rem;
+        justify-content: start;
+        gap:3rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    &__user-details{}
+    &__user-pfp{
+        border-radius: 50%;
+        width: 3.2em;
+    }
+    &__user-name{}
+    &__user-status{}
+
 
 
 
